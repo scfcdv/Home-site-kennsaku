@@ -1,0 +1,236 @@
+<link rel="icon" href="https://scfcdv.github.io/homeweb2/favicon.ico">
+<title>Homeサイト検索</title>
+<style>
+h2 {font-size: 24px;
+margin-bottom: 5px;}
+.a {font-size: 24px;}
+.b {font-size: 28px;}
+</style>
+<script>
+const lyricsDatabase = {
+        "カオス": {
+lyrics: "カオス・kaosu・かおす・chaos",
+  link: "https://scfcdv.github.io/4444/"},
+        "便利": {
+lyrics: "便利・べんり・bennri・convenient・検索ツール・計算機・電卓・ショートカット・時計・秒数変換・秒数変換機",
+  link: "https://scfcdv.github.io/bennri/"},
+        "目潰し": {
+lyrics: "目潰し1・目潰し１・めつぶし1・metubusi1・eye destroyer1",
+  link: "https://scfcdv.github.io/metubusi/"},
+        "目潰し2": {
+lyrics: "目潰し2・目潰し２・めつぶし2・metubusi2・eye destroyer2",
+  link: "https://scfcdv.github.io/metubusi2/"},
+        "目潰し3": {
+lyrics: "目潰し3・目潰し３・めつぶし3・metubusi3・eye destroyer3",
+  link: "https://scfcdv.github.io/metubusi3/"},
+        "ウイルス": {
+lyrics: "ウイルス・ういるす・uirusu・virus",
+  link: "https://scfcdv.github.io/uirusu7/"},
+        "強化ウイルス": {
+lyrics: "強化ウイルス・きょうかういるす・kyoukauirusu・enhanced virus",
+  link: "https://scfcdv.github.io/GOD5/"},
+        "超強化ウイルス": {
+lyrics: "超強化ウイルス・ちょうきょうかういるす・tyoukyoukauirusu・super-enhanced virus",
+  link: "https://scfcdv.github.io/kyouka-uirusu/"},
+        "動画": {
+lyrics: "動画・どうが・douga・video・曲",
+  link: "https://scfcdv.github.io/kyokudouga/"},
+        "ストップウォッチ": {
+lyrics: "ストップウォッチ・時計・時間・すとっぷうぉっち・sutoppuulotti・stopwatch",
+  link: "https://scfcdv.github.io/suttoppu/"},
+        "カメラ": {
+lyrics: "カメラ・かめら・camera・kamera・写真",
+  link: "https://scfcdv.github.io/kamera/"},
+        "文字カウント": {
+lyrics: "文字カウント・もじかうんと・mojikunnto・character count",
+  link: "https://scfcdv.github.io/moji/"},
+        "WEB": {
+lyrics: "WEBサイト・webサイト・ウェブサイト・うぇぶさいと・webusaito",
+  link: "https://m-39892622.hubspotpagebuilder.com/ja-jp/home"},
+        "youtube": {
+lyrics: "youtube・Youtube・ようつべ・動画見れる自作サイト",
+  link: "https://scfcdv.github.io/dougamiru/"},
+        "niconico": {
+lyrics: "niconico動画・ニコニコ動画・にこにこ動画・動画見れる自作サイト2",
+  link: "https://scfcdv.github.io/dougamiru2/"},
+        "小メモ帳": {
+lyrics: "小メモ帳・しょうめもちょう・syoumemotyou・small notepad",
+  link: "https://scfcdv.github.io/memo3/"},
+        "中メモ帳": {
+lyrics: "中メモ帳・ちゅうめもちょう・tyuumemotyou・medium notepad",
+  link: "https://scfcdv.github.io/memo2/"},
+        "大メモ帳": {
+lyrics: "大メモ帳・だいめもちょう・daimemotyou・large notepad",
+  link: "https://scfcdv.github.io/memo/"},
+        "過去に削除された作品": {
+lyrics: "過去に削除された作品・かこにさくじょされたさくひん・消去・kakonisakujyosaretasakuhinn",
+  link: "https://scfcdv.github.io/sakujyo/"},
+        "激むずタイピング": {
+lyrics: "激むずタイピング・げきむずたいぴんぐ・ゲキムズタイピング・gekimuzutaipinngu",
+  link: "https://typing.twi1.me/game/294201"},
+        "お知らせ": {
+lyrics: "お知らせ・おしらせ・告知・報告・osirase・オシラセ",
+  link: "https://scfcdv.github.io/osirase/"},
+        "軽量化Home": {
+lyrics: "軽量化Home・Home・home・けいりょうかほーむ・ケイリョウカホーム・keiryoukaho-mu・Lightweight Home",
+  link: "https://scfcdv.github.io/k-homeweb2/"},
+        "曲集": {
+lyrics: "曲集・曲とか・きょくしゅう・キョクシュウ・音楽・kyokusyuu・collection of songs",
+  link: "https://scfcdv.github.io/kyokutoka/"},
+        "python": {
+lyrics: "python・Python・py-script・パイソン・ぱいそん・paisonn",
+  link: "https://scfcdv.github.io/python/"},
+        "全サイト": {
+lyrics: "全サイト・ぜんさいと・ゼンサイト・zennsaito・Home・home・ホーム・All Sites",
+  link: "https://scfcdv.github.io/zennsaito/"},
+        "作者": {
+lyrics: "Home作者・ほーむさくしゃ・ホームサクシャ・Home制作者・Home作成者・ho-musakusya・HomeAuthor",
+  link: "https://kiyotanaoki2.vercel.app/"},
+        "Homeについて": {
+lyrics: "Homeについて・Homenituite・全サイト・ホームニツイテ・ほーむについて・ho-munituite",
+  link: "https://scfcdv.github.io/konosaito/"},
+        "鏡": {
+lyrics: "鏡・かがみ・カガミ・k・Kagami・mirror・ミラー",
+  link: "https://scfcdv.github.io/kagami/"},
+        "履歴なしgoogle": {
+lyrics: "履歴なしgoogle・Google・リレキナシグーグル・りれきなしぐーぐる・rirekinasigoogle・google without history",
+  link: "https://scfcdv.github.io/google/"},
+        "履歴なしbing": {
+lyrics: "履歴なしbing・rirekinasibing・Bing・リレキナシビング・りれきなしびんぐ・bing without history",
+  link: "https://scfcdv.github.io/bing/"},
+        "履歴削除": {
+lyrics: "履歴削除・りれきさくじょ・リレキサクジョ・rirekisakujyo・history deletion",
+  link: "https://scfcdv.github.io/rireki/"},
+        "Homeクイズ": {
+lyrics: "Homeクイズ・homeくいず・HomeQuiz・ホームクイズ・ほーむくいず・ho-mukuizu",
+  link: "https://scfcdv.github.io/kuizu/"},
+        "アニメ": {
+lyrics: "アニメ・あにめ・anime・animation",
+  link: "https://scfcdv.github.io/anime/"},
+        "chromebook質問": {
+lyrics: "chromebook質問・クロームブックしつもん・くろーむぶっくシツモン・Chromebook・chromebook question",
+  link: "https://m-39892622.hubspotpagebuilder.com/%E6%84%8F%E8%A6%8B-0"},
+        "chromebook回答": {
+lyrics: "chromebook回答・クロームブックカイトウ・くろーむぶっくかいとう・Chromebook回答・chromebook answers",
+  link: "https://scfcdv.github.io/chromebook/"},
+        "dino": {
+lyrics: "Dino・恐竜・ダイノ・だいの・chrome://dino",
+  link: "https://scfcdv.github.io/dino/"},
+        "カレンダー": {
+lyrics: "カレンダー・かれんだー・karennda-・月・calender",
+  link: "https://scfcdv.github.io/karennda-/"},
+        "便利Home": {
+lyrics: "便利Home・べんりほーむ・ベンリホーム・bennrihome・ho-mu・Convenient Home",
+  link: "https://scfcdv.github.io/b-homeweb2/"},
+        "夢": {
+lyrics: "夢・ゆめ・ユメ・yume・dreem・YUME・Dreem",
+  link: "https://scfcdv.github.io/yume/"},
+        "√": {
+lyrics: "√・ルート・るーと・root・ru-to・RU-TO",
+  link: "https://scfcdv.github.io/RU-TO/"},
+        "名前認識システム": {
+lyrics: "名前認識機能・なまえにんしきしすてむ・ナマエニンシキシステム・name recognition system・namaeninnsikisisutemu・cookie",
+  link: "https://scfcdv.github.io/cookie/"},
+        "超究極完全体テトリス": {
+lyrics: "超究極完全体テトリス・ちょうきゅうきょくかんぜんたいてとりす・チョウキュウキョクカンゼンタイテトリス・tyoukyuukyokukannzenntaitetorisu・Super Ultimate Complete Tetris",
+  link: "https://scfcdv.github.io/TETRIS/"},
+        "保存できるメモ": {
+lyrics: "保存できるメモ・ほぞんできるめも・ホゾンデキルメモ・hozonndekirumemo・Notes that can be saved",
+  link: "https://scfcdv.github.io/NEW-MEMO/"},
+        "単位変換表": {
+lyrics: "単位変換表・たんいへんかんひょう・タンイヘンカンヒョウ・tannihennkannhyou・unit conversion table",
+  link: "https://scfcdv.github.io/TANNIHENNKANN/"},
+        "翻訳": {
+lyrics: "翻訳・ほんやく・ホンヤク・honnyaku・translation",
+  link: "https://scfcdv.github.io/honnyaku/"},
+        "英語版Home": {
+lyrics: "英語版Home・えいごばんほーむ・エイゴバンホーム・English home",
+  link: "https://scfcdv.github.io/e-homeweb/"},
+        "Home集": {
+lyrics: "Home集・ほーむしゅう・ホームシュウ・homesyuu・Home Collection・ho-mu",
+  link: "https://scfcdv.github.io/Homesyuu/"},
+        "行配列ランダム化ツール": {
+lyrics: "行配列ランダム化ツール・ぎょうはいれつらんだむかつーる・ギョウハイレツランダムカツール・gyouhaireturandamukatu-ru・Row Array Randomization Tool",
+  link: "https://scfcdv.github.io/gyou-ranndamu/"},
+        "文字列置換ツール": {
+lyrics: "文字列置換ツール・もじれつちかんつーる・モジレツチカンツール・mozi retu tikan tu-ru・string replacement tool",
+  link: "https://scfcdv.github.io/ojiretu-tikannTool/"},
+        "文章'囲いツール": {
+lyrics: "文章'囲いツール・ぶんしょう'かこいつーる・bunsyou'kakoitu-ru・ブンショウ'カコイツール・Sentence 'enclosure tool",
+  link: "https://scfcdv.github.io/bunnsyou-kakoi/"},
+        "文字列結合プログラム": {
+lyrics: "文字列結合プログラム・もじれつけつごうぷろぐらむ・モジレツケツゴウプログラム・moziretuketugoupuroguramu・string join program",
+  link: "https://scfcdv.github.io/bunnsyou-ketugou/"},
+        "行削除": {
+lyrics: "行削除・ぎょうさくじょ・ギョウサクジョ・gyousakuzyo・line deletion",
+  link: "https://scfcdv.github.io/gyou-sakujyo/"},
+        "空白除去": {
+lyrics: "空白除去・くうはくじょきょ・クウハクジョキョ・kuuhakuzyokyo・blanking",
+  link: "https://scfcdv.github.io/kuuhakujyokyo/"},
+        "文字重複検知": {
+lyrics: "文字重複検知・もじじゅうふくけんち・モジジュウフクケンチ・mozizyuuhukukenti・Character overlap detection",
+  link: "https://scfcdv.github.io/jyuuhuku-kennti/"},
+        "HBLU": {
+lyrics: "HBLU",
+  link: "https://scfcdv.github.io/HBLU/"},
+        "今": {
+lyrics: "今・いま・イマ・ima・now・NOW・time・clock・時計・時間",
+  link: "https://scfcdv.github.io/NOWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWWW/"},
+        "web-html出力": {
+lyrics: "web-html出力・web-html output・web-htmlsyuturyoku・web-htmlしゅつりょく",
+  link: "https://scfcdv.github.io/html/"},
+        "ファイル名変更プログラム": {
+lyrics: "ファイル名変更プログラム・ふぁいるめいへんこうぷろぐらむ・ファイルメイヘンコウプログラム・fairumeihenkoupuroguramu・filename updater",
+  link: "https://scfcdv.github.io/fail-name-hennkou/"},
+        "軽いサイト": {
+lyrics: "軽いサイト・かるいさいと・カルイサイト・karuisaito・KARUISAITO・Light site",
+  link: "https://scfcdv.github.io/sin-karui/"},
+        "重いサイト": {
+lyrics: "重いサイト・おもいさいと・オモイサイト・omoisaito・OMOISAITO・Heavy Site",
+  link: "https://scfcdv.github.io/sin-OMOI/"},
+        "blob版web-html出力": {
+lyrics: "blob版web-html出力・びーろぶばんえいちてぃえむえるしゅつりょく・ビーロブバンエイチティエムエルシュツリョク・blobbannweb-htmlsyuturyoku・blob version of web-html output",
+  link: "https://scfcdv.github.io/blob-html-web/"},
+        "行カウント": {
+lyrics: "行カウント・ぎょうかうんと・ギョウカウント・gyoukaunnto・linecount",
+  link: "https://scfcdv.github.io/gyou-kaunnto/"},
+        "": {
+lyrics: "",
+  link: ""},
+        "": {
+lyrics: "",
+  link: ""},
+        "": {
+lyrics: "",
+  link: ""},
+};
+function search() {
+const keyword = document.getElementById("keyword").value.toLowerCase();
+const resultContainer = document.getElementById("result");
+resultContainer.innerHTML = ""; // 検索結果をリセット
+for (const title in lyricsDatabase) {
+const lyrics = lyricsDatabase[title].lyrics.toLowerCase();
+const link = lyricsDatabase[title].link;
+const lyricsSegments = lyrics.split("・");
+let found = false;
+for (const segment of lyricsSegments) {
+if (segment.includes(keyword)) {
+found = true;
+break;}}
+if (found || title.includes(keyword)) {
+const songResult = document.createElement("div");
+const linkElement = document.createElement("a");
+linkElement.href = link; // 個別のリンクを設定
+linkElement.target = "_blank"; // 新しいタブで開く
+const titleElement = document.createElement("h2");
+titleElement.textContent = title;
+linkElement.appendChild(titleElement);
+songResult.appendChild(linkElement);
+songResult.innerHTML += `<p>${lyricsDatabase[title].lyrics}</p>`;
+resultContainer.appendChild(songResult);}}
+if (resultContainer.innerHTML === "") {
+resultContainer.innerHTML = "該当する結果が見つかりませんでした。";}}
+</script>
+<input class="b" type="text" id="keyword" placeholder="題名またはキーワード">
+<button class="a" onclick="search()">検索</button>
+<div id="result"></div>
