@@ -293,6 +293,42 @@ lyrics: "奇数ジェネレ一ター・きすうじぇねれーたー・kisuujen
         "2進数表示": {
 lyrics: "ニ進数表示・にしんすうひょうじ・nisinnsuuhyouji・Binary display・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
   link: "https://scfcdv.github.io/nisinnsuu/"},
+        "円周率ジェネレーター": {
+lyrics: "円周率ジェネレーター・えんしゅうりつじぇねれーたー・ennsyuuritujenere-ta-・pi generator・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/ennsyuu/"},
+        "自然数ジェネレーター": {
+lyrics: "自然数ジェネレーター・しぜんすうじぇねれーたー・sizennsuujenere-ta-・natural number generator・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/sizennsuu/"},
+        "超階乗": {
+lyrics: "超階乗・ちょうかいじょう・tyoukaijyou・super factorial・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/tyoukaijyou/"},
+        "乱数ジェネレーター": {
+lyrics: "乱数ジェネレーター・乱数表示・らんすうじぇねれーたー・らんすうひょうじ・rannsuujenere-ta-・rannsuuhyouji・random number generator・Random number display・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/rannsuu/"},
+        "テトレーション計算機": {
+lyrics: "テトレーション計算機・てとれーしょんけいさんき・tetore-syonnkeisannki・tetration calculator・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/tetore-syonn/"},
+        "累乗": {
+lyrics: "累乗・るいじょう・ruijyou・exponentiation・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/ruijyou/"},
+        "累乗 ver.2": {
+lyrics: "累乗 ver.2・るいじょう var.２・ruijyou ver.2・Multiplication ver.2・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/kamiruijyou/"},
+        "階乗 ver.2": {
+lyrics: "階乗 ver.2・かいじょう var.２・kaijyou ver.2・factorial ver.2・数学系統・すうがくけいとう・mathematical system・suugakukeitou・算数・計算・けいさん・keisann",
+  link: "https://scfcdv.github.io/GOD-kaijyou/"},
+        "": {
+lyrics: "",
+  link: ""},
+        "": {
+lyrics: "",
+  link: ""},
+        "": {
+lyrics: "",
+  link: ""},
+        "": {
+lyrics: "",
+  link: ""},
         "": {
 lyrics: "",
   link: ""},
@@ -303,7 +339,7 @@ lyrics: "",
 function search() {
 const keyword = document.getElementById("keyword").value.toLowerCase();
 const resultContainer = document.getElementById("result");
-resultContainer.innerHTML = ""; // 検索結果をリセット
+resultContainer.innerHTML = "";
 for (const title in lyricsDatabase) {
 const lyrics = lyricsDatabase[title].lyrics.toLowerCase();
 const link = lyricsDatabase[title].link;
@@ -316,8 +352,8 @@ break;}}
 if (found || title.includes(keyword)) {
 const songResult = document.createElement("div");
 const linkElement = document.createElement("a");
-linkElement.href = link; // 個別のリンクを設定
-linkElement.target = "_blank"; // 新しいタブで開く
+linkElement.href = link;
+linkElement.target = "_blank";
 const titleElement = document.createElement("h2");
 titleElement.textContent = title;
 linkElement.appendChild(titleElement);
